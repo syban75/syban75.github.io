@@ -1,121 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>반세윤 Portfolio</title>
+  <title>Portfolio | 반세윤</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-
-    section {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 60px;
-      margin: 0;
-    }
-
-    p {
-      color: gray;
-      font-size: 18px;
-    }
-
-    .fade {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s ease;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .project {
-      border: 1px solid white;
-      padding: 20px;
-      margin: 10px;
-      width: 250px;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      background: white;
-      color: black;
-    }
+    body { font-family: 'Pretendard', sans-serif; }
+    .card-hover:hover { transform: translateY(-6px); transition: 0.3s; }
   </style>
 </head>
 
-<body>
+<body class="bg-[#f8f5f0] text-gray-800">
 
-  <!-- HERO -->
-  <section>
-    <h1>Hi, I'm Sean</h1>
-    <p id="typing"></p>
-  </section>
+<!-- ================= NAV ================= -->
+<header class="fixed top-0 left-0 w-full bg-white border-b z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="font-semibold text-lg">syban75</h1>
+    <nav class="space-x-6 text-sm">
+      <a href="#home" class="hover:text-blue-500">Home</a>
+      <a href="#projects" class="hover:text-blue-500">Projects</a>
+      <a href="#resume" class="hover:text-blue-500">Resume</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ABOUT -->
-  <section class="fade">
-    <h1>About</h1>
-    <p>AI, Data, Smart City</p>
-  </section>
+<!-- ================= HOME ================= -->
+<section id="home" class="pt-32 pb-20 text-center">
+  <h2 class="text-4xl font-semibold mb-4">Hello, I'm syban75</h2>
+  <p class="text-gray-500">DevOps · Data · Smart City AI</p>
+</section>
 
-  <!-- PROJECTS -->
-  <section class="fade">
-    <h1>Projects</h1>
-    <div class="project">Smart City AI</div>
-    <div class="project">Anomaly Detection</div>
-  </section>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="max-w-6xl mx-auto py-20 px-4">
 
-  <!-- CONTACT -->
-  <section class="fade">
-    <h1>Contact</h1>
-    <p>syban75@naver.com</p>
-  </section>
+  <!-- 🔲 바깥 박스 -->
+  <div class="bg-[#eef6ff] border border-blue-100 rounded-2xl p-10 shadow-sm">
+		
+  <h2 class="text-2xl font-semibold mb-10">Projects</h2>
 
-  <script>
-    // 타이핑 효과
-    const text = "I build things with AI & Data";
-    let i = 0;
+  <!-- 카드 영역  -->
+  <div class="grid md:grid-cols-3 gap-8">
 
-    function typing() {
-      if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 50);
-      }
-    }
-    typing();
+    <!-- 카드 1 -->
+	<div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm card-hover">
+      <h3 class="font-semibold text-lg mb-2">공동구 스마트 플랫폼</h3>
+      <p class="text-sm text-gray-500 mb-4">
+ 		공동구 활성화를 위한 스마트 운영 및 성능개선 기술개발
+      </p>
+      <a href="https://github.com/syban75/portfolio" target="_blank" class="text-blue-500 text-sm">
+        View Project →
+      </a>
+    </div>
 
-    // 스크롤 페이드 효과
-    const fades = document.querySelectorAll(".fade");
+    <!-- 카드 2 -->
+	<div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm card-hover">
+      <h3 class="font-semibold text-lg mb-2">Saasify 플랫폼</h3>
+      <p class="text-sm text-gray-500 mb-4">
+		SW산업의 디지털 트랜스포메이션을 위한 컨테이너 기반 SaaSify 서비스 플랫폼 개발
+      </p>
+      <a href="https://github.com/syban75" target="_blank" class="text-blue-500 text-sm">
+        View Project →
+      </a>
+    </div>
 
-    function checkFade() {
-      const trigger = window.innerHeight * 0.8;
+    <!-- 카드 3 -->
+	<div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm card-hover">
+      <h3 class="font-semibold text-lg mb-2">한-캄보디아 디지털정부</h3>
+      <p class="text-sm text-gray-500 mb-4">
+		한-캄보디아 디지털정부 협력센터 공동협력과제
+      </p>
+      <a href="https://github.com/syban75" target="_blank" class="text-blue-500 text-sm">
+        View Project →
+      </a>
+    </div>
 
-      fades.forEach(el => {
-        const top = el.getBoundingClientRect().top;
+    <!-- 카드 4 -->
+	<div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm card-hover">
+      <h3 class="font-semibold text-lg mb-2">한-캄보디아 디지털정부</h3>
+      <p class="text-sm text-gray-500 mb-4">
+		Hornet Detection AI
+      </p>
+      <a href="https://github.com/syban75" target="_blank" class="text-blue-500 text-sm">
+        View Project →
+      </a>
+    </div>
 
-        if (top < trigger) {
-          el.classList.add("show");
-        }
-      });
-    }
+  </div>
 
-    window.addEventListener("scroll", checkFade);
-  </script>
+  </div>
+</section>
+
+<!-- ================= RESUME ================= -->
+<section id="resume" class="bg-gray-50 py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-8">Resume</h2>
+
+    <div class="space-y-6">
+
+      <div>
+        <h3 class="font-semibold">DevOps Engineer</h3>
+        <p class="text-sm text-gray-500">Kubernetes · Docker · Jenkins</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold">Data Engineer</h3>
+        <p class="text-sm text-gray-500">PostgreSQL · Pandas · AI Modeling</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20 text-center">
+  <h2 class="text-2xl font-semibold mb-6">Contact</h2>
+  <p class="text-gray-500 mb-4">협업 및 프로젝트 문의 환영합니다</p>
+
+  <div class="space-x-6">
+    <a href="https://github.com/syban75" class="text-blue-500">GitHub</a>
+    <a href="#" class="text-blue-500">Email</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center text-sm text-gray-400 py-10">
+  © 2026 syban75. All rights reserved.
+</footer>
 
 </body>
 </html>
