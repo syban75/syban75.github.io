@@ -1,19 +1,121 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sean Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>반세윤 Portfolio</title>
+
   <style>
     body {
+      margin: 0;
       background: black;
       color: white;
-      text-align: center;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    p {
+      color: gray;
+      font-size: 18px;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project {
+      border: 1px solid white;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      background: white;
+      color: black;
     }
   </style>
 </head>
+
 <body>
-  <h1>Hi, I'm Sean</h1>
-  <p>I build AI systems</p>
+
+  <!-- HERO -->
+  <section>
+    <h1>Hi, I'm Sean</h1>
+    <p id="typing"></p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="fade">
+    <h1>About</h1>
+    <p>AI, Data, Smart City</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="fade">
+    <h1>Projects</h1>
+    <div class="project">Smart City AI</div>
+    <div class="project">Anomaly Detection</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="fade">
+    <h1>Contact</h1>
+    <p>syban75@naver.com</p>
+  </section>
+
+  <script>
+    // 타이핑 효과
+    const text = "I build things with AI & Data";
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 50);
+      }
+    }
+    typing();
+
+    // 스크롤 페이드 효과
+    const fades = document.querySelectorAll(".fade");
+
+    function checkFade() {
+      const trigger = window.innerHeight * 0.8;
+
+      fades.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < trigger) {
+          el.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkFade);
+  </script>
+
 </body>
 </html>
