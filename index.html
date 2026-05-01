@@ -19,7 +19,7 @@
 
 <body class="bg-[#f8f5f0] text-gray-800">
 
-<!-- ================= NAV ================= -->
+<!-- ================= NAV ================= 
 <header class="fixed top-0 left-0 w-full bg-white border-b z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
     <h1 class="font-semibold text-lg">syban75</h1>
@@ -32,10 +32,115 @@
   </div>
 </header>
 
+-->
+
+<!-- 헤더 네이게이션 -->
+<header class="sticky top-0 z-40 border-b border-line/80 bg-bg/90 backdrop-blur">
+
+  <div class="container-base flex h-16 items-center justify-between px-6">	
+    <!-- 로고 -->
+    <a href="/" class="flex items-center gap-3 text-sm font-semibold tracking-wide no-underline">
+
+      <!-- BAN icon svg -->
+	  <svg viewBox="0 0 64 64" class="h-8 w-8 shrink-0">
+		  <rect x="4" y="4" width="56" height="56" rx="14" fill="#1e40af"></rect>
+
+		  <text
+			x="50%"
+			y="50%"
+			text-anchor="middle"
+			dominant-baseline="middle"
+			font-size="20"
+			fill="#ffffff"
+			font-family="sans-serif"
+			font-weight="600"
+		  >
+			BAN 
+		  </text>
+	  </svg>
+
+      <span>PORTFOLIO 반세윤</span>
+    </a>
+
+    <!-- 네비게이션 -->
+    <nav class="flex items-center gap-4" aria-label="주요 메뉴">
+
+      <ul class="hidden md:flex items-center gap-4">
+        <li>
+          <a href="/" class="rounded-md px-2.5 py-1.5 text-sm bg-brand/12 font-semibold text-brand">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="/projects" class="rounded-md px-2.5 py-1.5 text-sm text-fg/90 hover:text-brand">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="/resume" class="rounded-md px-2.5 py-1.5 text-sm text-fg/90 hover:text-brand">
+            Resume
+          </a>
+        </li>
+
+        <li>
+          <a href="/contact" class="rounded-md px-2.5 py-1.5 text-sm text-fg/90 hover:text-brand">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+
+
 <!-- ================= HOME ================= -->
-<section id="home" class="pt-32 pb-20 text-center">
-  <h2 class="text-4xl font-semibold mb-4">Hello, I'm syban75</h2>
-  <p class="text-gray-500">DevOps · Data · Smart City AI</p>
+<section id="home" class="max-w-6xl mx-auto py-20 px-4">
+  <!-- 🔲 바깥 박스 -->
+  <div class="bg-[#eef6ff] border border-blue-100 rounded-2xl p-10 shadow-sm space-y-3">
+		 
+	
+  <!-- 관련 분야  -->
+  <p class="text-blue-500"> SENIOR CLOUD / DEVOPS / AI / MLOPS / NMS </p>
+
+
+  <!-- 개인 소개  -->
+  <h2 class="text-4xl font-semibold mb-4">
+		  Hello, I'm syban75
+  </h2>
+
+
+
+  <div class="pt-5 flex flex-wrap gap-3">
+
+  <!-- 🔵 Primary 버튼 -->
+  <a href="/projects"
+     class="px-5 py-2.5 rounded-md text-sm font-semibold 
+            bg-white border border-gray-300 text-gray-700 
+            shadow-sm 
+            hover:bg-gray-50 hover:shadow-md 
+            active:scale-95 
+            transition-all duration-200">
+    프로젝트 보기
+  </a>
+
+  <!-- ⚪ Secondary 버튼 -->
+  <a href="/resume"
+     class="px-5 py-2.5 rounded-md text-sm font-semibold 
+            bg-white border border-gray-300 text-gray-700 
+            shadow-sm 
+            hover:bg-gray-50 hover:shadow-md 
+            active:scale-95 
+            transition-all duration-200">
+    이력서 보기
+  </a>
+
+  </div>
+
+
+  </div>
 </section>
 
 <!-- ================= PROJECTS ================= -->
