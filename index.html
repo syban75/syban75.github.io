@@ -614,32 +614,139 @@ function closeDetails() {
 <!-- ================= RESUME ================= -->
 <section id="resume" class="max-w-6xl mx-auto py-12 px-4 scroll-mt-16">
   <!-- 🔲 바깥 박스 -->
-  <div class="bg-[#eef6ff] border border-blue-100 rounded-2xl p-10 shadow-sm">
+  <div class="bg-[#fafafa] border border-gray-300 rounded-2xl p-10 shadow-sm">
 
-    <h2 class="text-2xl font-semibold mb-8">Resume</h2>
 
-  	<!-- 카드 영역  -->
-  	<div class="grid md:grid-cols-2 gap-8">
+  <!-- 사진 개요  -->
+  <div class="flex flex-col gap-6 lg:grid lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
 
-		<!-- 카드 1 -->
-		<div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:border-blue-500 transition">
-		  <h3 class="font-semibold text-lg mb-2">Cloud DevOps Engineer</h3>
-		  <p class="text-sm text-gray-800 mb-4">
-			Kubernetes · Docker · Jenkins
-		  </p>
-		</div>
+  <!-- LEFT -->
+  <div>
+    <!-- PROFILE -->
+    <div class="flex items-end gap-4 sm:gap-5">
 
-		<!-- 카드 2 -->
-		<div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:border-blue-500 transition">
-		  <h3 class="font-semibold text-lg mb-2">AI Data Engineer</h3>
-		  <p class="text-sm text-gray-800 mb-4">
-			PostgreSQL · Pandas · AI Modeling
-		  </p>
-		</div>
+      <!-- 이미지 -->
+      <div class="relative w-[105px] h-[140px] shrink-0 overflow-hidden border border-gray-300 bg-[#f8f5f0] p-1 shadow-sm">
+        <img 
+          src="반세윤님_반명함사이즈.jpg"
+          alt="반세윤 증명사진"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- 텍스트 -->
+      <div class="min-w-0 flex-1">
+        <h2 class="text-xl font-semibold uppercase tracking-[0.18em] text-gray-800">
+          Resume
+        </h2>
+
+        <h1 class="mt-3 max-w-[18ch] text-3xl font-semibold leading-tight sm:max-w-[20ch] sm:text-4xl">
+          반세윤
+        </h1>
+
+        <p class="mt-3 text-base font-medium text-blue-600/90 sm:text-lg">
+			솔루션 서비스를 AI와 Cloud으로 구축하는 엔지니어
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 소개 -->
+    <div class="mt-5 space-y-2">
+      <p class="max-w-2xl break-keep text-sm leading-relaxed text-gray-700 sm:text-base">
+        프론트엔드 중심으로 실서비스 2건을 설계, 구현, 배포, 운영까지 직접 완주한 엔지니어입니다.
+      </p>
+
+      <p class="max-w-2xl break-keep text-sm leading-relaxed text-gray-700 sm:text-base">
+        사용자 경험과 운영 구조를 함께 설계하며, 실제로 돌아가는 서비스를 만드는 방식으로 일합니다.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="rounded-xl border border-gray-300 bg-gray-100 p-5">
+
+    <div class="space-y-4 text-sm text-gray-700">
+
+      <!-- GitHub -->
+      <div>
+        <p class="text-xs uppercase tracking-[0.14em] text-gray-800">
+          GitHub
+        </p>
+        <a href="https://github.com/syban75" target="_blank"
+           class="mt-1 inline-flex items-center gap-1 font-medium hover:text-blue-600 hover:underline">
+          <span>github.com/syban75</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <!-- Portfolio -->
+      <div>
+        <p class="text-xs uppercase tracking-[0.14em] text-gray-800">
+          Portfolio
+        </p>
+        <a href="https://syban75.github.io" target="_blank"
+           class="mt-1 inline-flex items-center gap-1 font-medium hover:text-blue-600 hover:underline">
+          <span>syban75.github.io</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <!-- PDF -->
+      <div>
+        <p class="text-xs uppercase tracking-[0.14em] text-gray-800">
+          PDF
+        </p>
+
+        <div class="mt-2 flex flex-wrap gap-2">
+
+          <a href="반세윤_이력서_경력증명.pdf" download
+             class="inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium hover:border-blue-500 hover:text-blue-600">
+            <span>이력서 pdf</span>
+            <span>↓</span>
+          </a>
+
+          <a href="반세윤_포트폴리오.pdf" download
+             class="inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium hover:border-blue-500 hover:text-blue-600">
+            <span>포트폴리오 pdf</span>
+            <span>↓</span>
+          </a>
+
+          <a href="반세윤_자기소개서.pdf" download
+             class="inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium hover:border-blue-500 hover:text-blue-600">
+            <span>자기소개서 pdf</span>
+            <span>↓</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  </div>
+
+  <!-- 학력 경력  -->
+  <div class="flex flex-col gap-6 lg:grid lg:grid-cols-2 mt-8">
+
+  	<!-- 학력 -->
+  	<div class="rounded-xl border border-gray-300 bg-gray-100 p-5">
+
+  	</div>
+
+  	<!-- 경력 -->
+  	<div class="rounded-xl border border-gray-300 bg-gray-100 p-5">
 
   	</div>
 
   </div>
+
+
+  </div>
+
 </section>
 
 <!-- ================= CONTACT ================= -->
